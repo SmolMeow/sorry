@@ -45,15 +45,21 @@ export default function GiftPage() {
         ✨
       </motion.div>
 
-      <motion.h2
-        layout
-        initial={{ opacity: 0, }}
-        animate={{ opacity: 1, }}
-        transition={{ duration: 1 }}
-        className="text-3xl text-pink-300 mb-16"
-      >
-        I wanted to get more creative, but the time was less...
-      </motion.h2>
+      {/* Intro text with vanish on gift click */}
+      <AnimatePresence>
+        {!giftOpened && (
+          <motion.h2
+            key="intro-text"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl text-pink-300 mb-16"
+          >
+            I wanted to get more creative, but the time was less...
+          </motion.h2>
+        )}
+      </AnimatePresence>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
@@ -105,11 +111,11 @@ export default function GiftPage() {
                   duration: 2,
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
-                  delay: 2
+                  delay: 2,
                 }}
                 className="text-pink-200 mt-6 text-xl relative z-10"
               >
-                So I'll keep some ideas on hold, and will try to surprise you next time (Please click on the compooter car)
+                So I'll keep some ideas on hold, and will try my best to give you a surprise next time (Please click on the compooter car)
               </motion.p>
 
               {/* Floating sparkles around gift */}
@@ -195,7 +201,7 @@ export default function GiftPage() {
                       transition={{ duration: 0.8, delay: 0.3 }}
                       className="text-2xl text-pink-300 leading-relaxed"
                     >
-                      Anshruta, these pictures glow with your energy — soft, vibrant, and full of life
+                      These pictures glow with your energy - soft, vibrant, and full of life.
                     </motion.p>
                     <motion.p
                       initial={{ opacity: 0, y: 15 }}
