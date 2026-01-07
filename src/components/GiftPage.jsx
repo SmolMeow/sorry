@@ -52,7 +52,7 @@ export default function GiftPage() {
         transition={{ duration: 1 }}
         className="text-3xl text-pink-300 mb-16"
       >
-        I have something special for you... 💝
+        I wanted to get more creative, but the time was less...
       </motion.h2>
 
       <motion.div
@@ -109,7 +109,7 @@ export default function GiftPage() {
                 }}
                 className="text-pink-200 mt-6 text-xl relative z-10"
               >
-                Click to open!🎁✨
+                So I'll keep some ideas on hold, and will try to surprise you next time
               </motion.p>
 
               {/* Floating sparkles around gift */}
