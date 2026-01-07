@@ -84,7 +84,7 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
           transition={{ duration: 0.8, delay: 1.3 }}
           className="text-pink-200 text-xl leading-relaxed"
         >
-          It's late night… I've been walking for hours…
+          Hi Bhatooru
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,7 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
           transition={{ duration: 0.8, delay: 1.6 }}
           className="text-purple-200 text-xl leading-relaxed"
         >
-          I'm holding something heavy… not in hands, but in heart…
+          Please poora pardhna...
         </motion.p>
       </motion.div>
 
@@ -121,7 +121,7 @@ export default function OpeningPage({ setCurrentPage, setMusicPlaying, setShowMu
             repeatDelay: 2,
           }}
         />
-        <span className="relative z-10">Let me talk...</span>
+        <span className="relative z-10">Okei...</span>
       </motion.button>
 
       {/* Bottom floating elements */}
