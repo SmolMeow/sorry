@@ -109,7 +109,7 @@ export default function GiftPage() {
                 }}
                 className="text-pink-200 mt-6 text-xl relative z-10"
               >
-                So I'll keep some ideas on hold, and will try to surprise you next time
+                So I'll keep some ideas on hold, and will try to surprise you next time (Please click on the compooter car)
               </motion.p>
 
               {/* Floating sparkles around gift */}
