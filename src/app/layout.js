@@ -2,7 +2,7 @@ import "./globals.css"
 
 export const metadata = {
   title: "I'm Sorry",
-  description: "A heartfelt apology website",
+  description: "My apollocheese to chhoter",
 }
 
 export default function RootLayout({ children }) {
