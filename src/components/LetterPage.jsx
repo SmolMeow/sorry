@@ -7,15 +7,8 @@ export default function LetterPage({ setCurrentPage }) {
     setCurrentPage("hug")
   }
 
-  // Friend-themed messages and decorations
-  const friends = [
-    { img: 1, emojiTop: "🎉", emojiBottom: "😎", message: "You always make me laugh!" },
-    { img: 2, emojiTop: "💫", emojiBottom: "🍀", message: "Your energy is contagious!" },
-    { img: 3, emojiTop: "🦋", emojiBottom: "🌸", message: "Life’s brighter with you!" },
-  ]
-
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-b from-purple-900 via-pink-900 to-purple-900">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,11 +21,11 @@ export default function LetterPage({ setCurrentPage }) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl text-pink-300 mb-8 mt-10 md:mt-0"
         >
-          Hey friend! Check these out… 🌟
+          I've been staring at these all night…🌙
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {friends.map((f, i) => (
+          {[1, 2, 3].map((i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, rotate: -8 + Math.random() * 16, y: 30 }}
@@ -43,52 +36,82 @@ export default function LetterPage({ setCurrentPage }) {
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
               className="relative group cursor-pointer mx-auto"
-              whileHover={{ y: -2, transition: { duration: 0.2 } }}
+              whileHover={{
+                y: -2,
+                transition: { duration: 0.2 },
+              }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Main polaroid */}
+              {/* Main polaroid container */}
               <div className="bg-white p-3 rounded-2xl shadow-lg transform transition-all duration-300 group-hover:shadow-pink-200/40 max-w-[200px]">
+                {/* Photo area */}
                 <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-pink-50 to-purple-50">
+                  {/* Save the photos with name like 1.jpg, 2.jpg ... and change the src to this - /images/${i}.jpg */}
                   <img
-                    src={`/images/${f.img}.jpg`}
-                    alt={`Friend memory ${i + 1}`}
+                    src={`/images/1.jpg`}
+                    alt={`Beautiful memory ${i}`}
                     className="w-full h-36 object-cover"
                   />
+
+                  {/* Cute corner decorations */}
                   <div className="absolute top-1 right-1">
-                    <span className="text-xs">{f.emojiTop}</span>
+                    <span className="text-xs">{i === 1 ? "💕" : i === 2 ? "✨" : "🌸"}</span>
                   </div>
                 </div>
 
+                {/* Cute handwritten area */}
                 <div className="mt-3 px-2 py-2 bg-white">
-                  <p className="text-sm text-purple-400">{f.message}</p>
+                  <div className="flex justify-center space-x-1">
+                    <div className="w-8 h-0.5 bg-pink-200 rounded-full"></div>
+                    <div className="w-6 h-0.5 bg-purple-200 rounded-full"></div>
+                    <div className="w-10 h-0.5 bg-pink-200 rounded-full"></div>
+                  </div>
+                  <div className="flex justify-center space-x-1 mt-1">
+                    <div className="w-12 h-0.5 bg-purple-200 rounded-full"></div>
+                    <div className="w-4 h-0.5 bg-pink-200 rounded-full"></div>
+                  </div>
                 </div>
               </div>
 
+              {/* Cute tape - different colors for each */}
               <div
-                className={`absolute -top-2 left-1/2 transform -translate-x-1/2 w-12 h-6 rounded-md shadow-sm opacity-90 ${
-                  i === 0
-                    ? "bg-gradient-to-r from-yellow-200 to-yellow-300 border border-yellow-400/30"
-                    : i === 1
+                className={`absolute -top-2 left-1/2 transform -translate-x-1/2 w-12 h-6 rounded-md shadow-sm opacity-90 ${i === 1
+                  ? "bg-gradient-to-r from-yellow-200 to-yellow-300 border border-yellow-400/30"
+                  : i === 2
                     ? "bg-gradient-to-r from-green-200 to-green-300 border border-green-400/30"
                     : "bg-gradient-to-r from-blue-200 to-blue-300 border border-blue-400/30"
-                }`}
+                  }`}
               ></div>
 
-              {/* Floating emojis */}
+              {/* Floating cute elements */}
               <motion.div
                 className="absolute -top-1 -right-2 text-sm"
-                animate={{ y: [0, -3, 0], rotate: [0, 5, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                animate={{
+                  y: [0, -3, 0],
+                  rotate: [0, 5, 0],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Number.POSITIVE_INFINITY,
+                  delay: i * 0.5,
+                }}
               >
-                {f.emojiTop}
+                {i === 1 ? "🎀" : i === 2 ? "💫" : "🦋"}
               </motion.div>
 
               <motion.div
                 className="absolute -bottom-2 -left-2 text-sm"
-                animate={{ y: [0, -2, 0], rotate: [0, -5, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
+                animate={{
+                  y: [0, -2, 0],
+                  rotate: [0, -5, 0],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  delay: i * 0.3,
+                }}
               >
-                {f.emojiBottom}
+                {i === 1 ? "🌺" : i === 2 ? "🍃" : "💖"}
               </motion.div>
             </motion.div>
           ))}
@@ -98,7 +121,7 @@ export default function LetterPage({ setCurrentPage }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="space-y-4"
+          className="space-y-6"
         >
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -106,7 +129,7 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="text-xl text-purple-200 leading-relaxed"
           >
-            Friends like you make life brighter! 🌈
+            Thank you for being my best friend all this time..
           </motion.p>
 
           <motion.p
@@ -115,8 +138,17 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-lg text-pink-200 leading-relaxed max-w-lg mx-auto"
           >
-            Thanks for always being there. Let’s make more memories together! 🎉
+            Aapne sahi kaha tha
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 3, duration: 0.8 }}
+            className="text-pink-300 text-xl mt-6"
+          >
+            Aap ho hi itne acche ki sabko mza aata hi hai aape saath
+          </motion.p>
+
         </motion.div>
 
         <motion.button
@@ -132,7 +164,7 @@ export default function LetterPage({ setCurrentPage }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 0.8 }}
         >
-          Continue the fun! 🎊
+          
         </motion.button>
       </motion.div>
     </div>
