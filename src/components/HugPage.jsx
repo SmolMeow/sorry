@@ -135,7 +135,7 @@ export default function HugPage({ setCurrentPage }) {
           }}
         />
       
-        <span className="relative z-10">Okeii.</span>
+        <span className="relative z-10">Okeii</span>
       </motion.button>
 
       <AnimatePresence>
