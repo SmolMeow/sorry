@@ -195,7 +195,7 @@ export default function GiftPage() {
                       transition={{ duration: 0.8, delay: 0.3 }}
                       className="text-2xl text-pink-300 leading-relaxed"
                     >
-                      This flower will never wilt...🌹
+                      Anshruta, these pictures glow with your energy — soft, vibrant, and full of life
                     </motion.p>
                     <motion.p
                       initial={{ opacity: 0, y: 15 }}
@@ -203,8 +203,7 @@ export default function GiftPage() {
                       transition={{ duration: 0.8, delay: 0.6 }}
                       className="text-lg text-purple-200 leading-relaxed"
                     >
-                      Just like my love for you. I promise to cherish you every single day, and never take your
-                      beautiful heart for granted again.💖
+                      Yet even they fall short of capturing how much warmth and joy you carry within.
                     </motion.p>
                     <motion.p
                       initial={{ opacity: 0, y: 15 }}
@@ -212,7 +211,7 @@ export default function GiftPage() {
                       transition={{ duration: 0.8, delay: 0.9 }}
                       className="text-xl text-pink-200"
                     >
-                      You mean everything to me💕✨
+                      You light up every space you enter, and honestly, you deserve nothing less than the whole world ✨
                     </motion.p>
                   </motion.div>
                 )}
