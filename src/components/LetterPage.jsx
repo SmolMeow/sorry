@@ -21,7 +21,7 @@ export default function LetterPage({ setCurrentPage }) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl text-pink-300 mb-8 mt-10 md:mt-0"
         >
-          I've been staring at these all night…🌙
+          Aapne sahi kaha tha, aap ho hi itne acche ki sabko aapke saath mza hi aata hai
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -129,7 +129,7 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="text-xl text-purple-200 leading-relaxed"
           >
-            Thank you for being my best friend all this time..
+            Please no more gussa at meeeeee
           </motion.p>
 
           <motion.p
@@ -138,7 +138,7 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ duration: 0.8, delay: 1.8 }}
             className="text-lg text-pink-200 leading-relaxed max-w-lg mx-auto"
           >
-            Aapne sahi kaha tha
+            My Apollocheese....
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -146,7 +146,7 @@ export default function LetterPage({ setCurrentPage }) {
             transition={{ delay: 3, duration: 0.8 }}
             className="text-pink-300 text-xl mt-6"
           >
-            Aap ho hi itne acche ki sabko mza aata hi hai aape saath
+            Thank you for being my best friend all this time
           </motion.p>
 
         </motion.div>
