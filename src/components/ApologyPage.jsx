@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 export default function ApologyPage({ setCurrentPage }) {
   const [currentText, setCurrentText] = useState(0)
 
-  const texts = ["Hi Bhatoooru", "I'm really sorry", "Mujhe dhyaan rakhna chaiye tha aapki baat ka"]
+  const texts = ["Mujhe dhyaan rakhna chaiye tha aapki baat ka", "Abse mai kabhi kuch aisa nahi karunga", "I promise"]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,7 +64,7 @@ export default function ApologyPage({ setCurrentPage }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
       >
-        Read my letter...
+        Meowww...
       </motion.button>
     </div>
   )
